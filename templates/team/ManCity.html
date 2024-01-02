@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester City</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/ManCity.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>Manchester City</h2>
+                <p>設立年: 1880年</p>
+                <p>ホーム: マンチェスター</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>マンチェスターのクラブ。Big6の1つ。<br>UAEの投資グループに買収されて以降、豊富な資金力で世界屈指の強豪クラブとなる。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>エティハドスタジアム</p>
+                <p>収容人数: 53400人</p>
+            </div>
+            <div class="titles">
+                <h2>タイトル</h2>
+                <ul>
+                    <li>プレミアリーグ: 7回</li>
+                    <li>フットボールリーグ: 2回</li>
+                    <li>FAカップ: 7回</li>
+                    <li>EFLカップ:8回</li>
+                    <li>UCL:1回</li>
+                    <!-- その他のタイトル -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

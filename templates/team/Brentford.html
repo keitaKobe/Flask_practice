@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brentford</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/Brentford.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>Brentford</h2>
+                <p>設立年: 1889年</p>
+                <p>ホーム: ブレントフォード</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>ロンドンのクラブ。愛称はThe Bees（ハチ）で、クラブカラーは赤と白。<br>ボート競技の選手が冬の間にサッカーをプレーできるようにと、クラブが設立。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>ブレントフォード・コミュニティ・スタジアム</p>
+                <p>収容人数: 17250人</p>
+            </div>
+            <div class="titles">
+                <h2>コラム</h2>
+                <p>プロギャンブラーであるマシュー・ベンハムが独自の統計分析の手法を用いて、<br>クラブ運営や選手補強を行い、躍進を遂げた。</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

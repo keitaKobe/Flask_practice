@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プレミアリーグ情報</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+
+<body>
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu_main">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li class="menu_logo"><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="75px" height="75px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="main_container">
+        <div class="main_left">
+            <div class="no_racism">
+                <img src="{{ url_for('static', filename='images/graph/no_room_for_racism.png') }}" alt="no room no racism" />
+            </div>
+          
+        </div>
+
+        <div class="main_center">
+            <div class="main_gif">
+                <img src="{{ url_for('static', filename='images/gif/champion.gif') }}" alt="champion" />
+            </div>
+          
+        </div>
+
+        <div class="main_right">
+            <div class="league_logo">
+                <img src="{{ url_for('static', filename='images/graph/logo4.png') }}" alt="チームロゴ" />
+            </div>
+          
+        </div>
+
+    </div>
+    <div class="match_cards">
+        <h2>注目の対戦カード</h2>
+    </div>
+
+    <section class="match">
+        <div class="team-left">
+            <img src="{{ url_for('static', filename='images/emblem/ManCity.png') }}" class="team-choice" id="team1-choice" onclick="openModal('team1')"> 
+            <img src="{{ url_for('static', filename='images/graph/vs.jpg') }}" class="vs_choice" alt="vs">
+            <img src="{{ url_for('static', filename='images/emblem/ManUnited.png') }}" class="team-choice" id="team2-choice" onclick="openModal('team2')">
+        </div>
+        <div class="team-center">
+            <img src="{{ url_for('static', filename='images/emblem/Chelsea.png') }}" class="team-choice" id="team3-choice" onclick="openModal('team3')"> 
+            <img src="{{ url_for('static', filename='images/graph/vs.jpg') }}" class="vs_choice" alt="vs">
+            <img src="{{ url_for('static', filename='images/emblem/Arsenal.png') }}" class="team-choice" id="team4-choice" onclick="openModal('team4')">
+        </div>
+        <div class="team-right">
+            <img src="{{ url_for('static', filename='images/emblem/Liverpool.png') }}" class="team-choice" id="team5-choice" onclick="openModal('team5')"> 
+            <img src="{{ url_for('static', filename='images/graph/vs.jpg') }}" class="vs_choice" alt="vs">
+            <img src="{{ url_for('static', filename='images/emblem/Tottenham.png') }}" class="team-choice" id="team6-choice" onclick="openModal('team6')">
+        </div>
+
+
+    </section>
+
+    <!-- モーダルウィンドウ (初期状態は非表示) -->
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>チームを選択してください。</p>
+            <div id="team-list">
+                <img src="{{ url_for('static', filename='images/emblem/Arsenal.png') }}" alt="チーム0" class="team-icon" onclick="selectTeam(0)">
+                <img src="{{ url_for('static', filename='images/emblem/AstonVilla.png') }}" alt="チーム1" class="team-icon" onclick="selectTeam(1)">
+                <img src="{{ url_for('static', filename='images/emblem/Bournemouth.png') }}" alt="チーム2" class="team-icon" onclick="selectTeam(2)">
+                <img src="{{ url_for('static', filename='images/emblem/Brentford.png') }}" alt="チーム3" class="team-icon" onclick="selectTeam(3)">
+                <img src="{{ url_for('static', filename='images/emblem/Brighton.png') }}" alt="チーム4" class="team-icon" onclick="selectTeam(4)">
+                <img src="{{ url_for('static', filename='images/emblem/Burnley.png') }}" alt="チーム5" class="team-icon" onclick="selectTeam(5)">
+                <img src="{{ url_for('static', filename='images/emblem/Chelsea.png') }}" alt="チーム6" class="team-icon" onclick="selectTeam(6)">
+                <img src="{{ url_for('static', filename='images/emblem/Crystal.png') }}" alt="チーム7" class="team-icon" onclick="selectTeam(7)">
+                <img src="{{ url_for('static', filename='images/emblem/Everton.png') }}" alt="チーム8" class="team-icon" onclick="selectTeam(8)">
+                <img src="{{ url_for('static', filename='images/emblem/Fulham.png') }}" alt="チーム9" class="team-icon" onclick="selectTeam(9)">
+                <img src="{{ url_for('static', filename='images/emblem/Liverpool.png') }}" alt="チーム10" class="team-icon" onclick="selectTeam(10)">
+                <img src="{{ url_for('static', filename='images/emblem/Luton.png') }}" alt="チーム11" class="team-icon" onclick="selectTeam(11)">
+                <img src="{{ url_for('static', filename='images/emblem/ManCity.png') }}" alt="チーム12" class="team-icon" onclick="selectTeam(12)">
+                <img src="{{ url_for('static', filename='images/emblem/ManUnited.png') }}" alt="チーム13" class="team-icon" onclick="selectTeam(13)">
+                <img src="{{ url_for('static', filename='images/emblem/Newcastle.png') }}" alt="チーム14" class="team-icon" onclick="selectTeam(14)">
+                <img src="{{ url_for('static', filename='images/emblem/NotForest.png') }}" alt="チーム15" class="team-icon" onclick="selectTeam(15)">
+                <img src="{{ url_for('static', filename='images/emblem/Sheffield.png') }}" alt="チーム16" class="team-icon" onclick="selectTeam(16)">
+                <img src="{{ url_for('static', filename='images/emblem/Tottenham.png') }}" alt="チーム17" class="team-icon" onclick="selectTeam(17)">
+                <img src="{{ url_for('static', filename='images/emblem/WestHam.png') }}" alt="チーム18" class="team-icon" onclick="selectTeam(18)">
+                <img src="{{ url_for('static', filename='images/emblem/Wolves.png') }}" alt="チーム19" class="team-icon" onclick="selectTeam(19)">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 他のセクションやフッター -->
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  
+</body>
+
+</html>

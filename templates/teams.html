@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チーム情報</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body class="teams_page">
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+
+
+<!-- チームのアイコン -->
+
+    <div class="team_containers1">
+      <div class="team_container1">
+        <a href="/team/Arsenal"><img src="{{ url_for('static', filename='images/emblem/Arsenal.png') }}" alt="Arsenal"></a>         
+      </div>
+      <div class="team_container1">
+        <a href="/team/AstonVilla"><img src="{{ url_for('static', filename='images/emblem/AstonVilla.png') }}" alt="AstonVilla"></a>         
+      </div>
+      <div class="team_container1">
+        <a href="/team/Bournemouth"><img src="{{ url_for('static', filename='images/emblem/Bournemouth.png') }}" alt="Bournemouth"></a>
+      </div>
+      <div class="team_container1">
+        <a href="/team/Brentford"><img src="{{ url_for('static', filename='images/emblem/Brentford.png') }}" alt="Brentford"></a>
+      </div>
+      <div class="team_container1">
+        <a href="/team/Brighton"><img src="{{ url_for('static', filename='images/emblem/Brighton.png') }}" alt="Brighton"></a>
+      </div>
+      <div class="team_container1">
+        <a href="/team/Burnley"><img src="{{ url_for('static', filename='images/emblem/Burnley.png') }}" alt="Burnley"></a>
+      </div>
+      <div class="team_container1">
+        <a href="/team/Chelsea"><img src="{{ url_for('static', filename='images/emblem/Chelsea.png') }}" alt="Chelsea"></a>         
+      </div>
+    </div>
+
+    <div class="team_containers2">
+      <div class="team_container2">
+        <a href="/team/Crystal"><img src="{{ url_for('static', filename='images/emblem/Crystal.png') }}" alt="Crystal"></a>
+      </div>
+      <div class="team_container2">
+        <a href="/team/Everton"><img src="{{ url_for('static', filename='images/emblem/Everton.png') }}" alt="Everton"></a>
+      </div>
+      <div class="team_container2">
+        <a href="/team/Fulham"><img src="{{ url_for('static', filename='images/emblem/Fulham.png') }}" alt="Fulham"></a>
+      </div>
+      <div class="container_logo">
+        <img src="{{ url_for('static', filename='images/graph/logo3.png') }}" alt="premier leagues">         
+      </div>
+      <div class="team_container2">
+        <a href="/team/Liverpool"><img src="{{ url_for('static', filename='images/emblem/Liverpool.png') }}" alt="Liverpool"></a>
+      </div>
+      <div class="team_container2">
+        <a href="/team/Luton"><img src="{{ url_for('static', filename='images/emblem/Luton.png') }}" alt="Luton"></a>
+      </div>
+      <div class="team_container2">
+        <a href="/team/ManCity"><img src="{{ url_for('static', filename='images/emblem/ManCity.png') }}" alt="ManCity"></a>
+      </div>
+    </div>
+
+
+    <div class="team_containers3">
+      <div class="team_container3">
+        <a href="/team/ManUnited"><img src="{{ url_for('static', filename='images/emblem/ManUnited.png') }}" alt="ManUnited"></a>
+      </div>
+      <div class="team_container3">
+        <a href="/team/Newcastle"><img src="{{ url_for('static', filename='images/emblem/Newcastle.png') }}" alt="Newcastle"></a>
+      </div>
+      <div class="team_container3">
+        <a href="/team/NotForest"><img src="{{ url_for('static', filename='images/emblem/NotForest.png') }}" alt="NotForest"></a>
+      </div>
+      <div class="team_container3">
+        <a href="/team/Sheffield"><img src="{{ url_for('static', filename='images/emblem/Sheffield.png') }}" alt="Sheffield"></a>
+      </div>
+      <div class="team_container3">
+        <a href="/team/Tottenham"><img src="{{ url_for('static', filename='images/emblem/Tottenham.png') }}" alt="Tottenham"></a>
+      </div>
+      <div class="team_container3">
+        <a href="/team/WestHam"><img src="{{ url_for('static', filename='images/emblem/WestHam.png') }}" alt="WestHam"></a>
+      </div>
+      <div class="team_container3">
+        <a href="/team/Wolves"><img src="{{ url_for('static', filename='images/emblem/Wolves.png') }}" alt="Wolves"></a>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="right-side">
+        <div class="overview">
+        </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

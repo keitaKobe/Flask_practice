@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プレミアリーグのチーム位置マップ</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <script src="https://maps.googleapis.com/maps/api/js?key='API_key'"></script> <!-- ここにAPIキーを入力 -->
+</head>
+<body>
+
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="map"></div>
+
+    <script>
+        function initialize() {
+            const mapOptions = {
+                center: { lat: 52.3555, lng: -1.1743 }, // イングランドの中心
+                zoom: 6
+            };
+
+            const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            // プレミアリーグのチームの位置の例
+            const teams = [
+                
+                { name: 'Tottenham', position: { lat: 51.6044, lng: -0.0663 } , icon: "{{ url_for('static', filename='images/emblem/Tottenham.png') }}", url:'/team/Tottenham'},
+                { name: 'ManCity', position: { lat: 53.4832, lng: -2.2002 } , icon: "{{ url_for('static', filename='images/emblem/ManCity.png') }}", url:'/team/ManCity'},
+                { name: 'Arsenal', position: { lat: 51.5555, lng: -0.1092 } , icon: "{{ url_for('static', filename='images/emblem/Arsenal.png') }}", url:'/team/Arsenal'},
+                { name: 'Liverpool', position: { lat: 53.4309, lng: -2.9608 } , icon: "{{ url_for('static', filename='images/emblem/Liverpool.png') }}", url:'/team/Liverpool'},
+                { name: 'AstonVilla', position: { lat: 52.5093, lng: -1.8848 } , icon: "{{ url_for('static', filename='images/emblem/AstonVilla.png') }}", url:'/team/AstonVilla'},
+                { name: 'Newcastle', position: { lat: 54.9756, lng: -1.6216 } , icon: "{{ url_for('static', filename='images/emblem/Newcastle.png') }}", url:'/team/Newcastle'},
+                { name: 'Brighton', position: { lat: 50.8616, lng: -0.0838 } , icon: "{{ url_for('static', filename='images/emblem/Brighton.png') }}", url:'/team/Brighton'},
+                { name: 'ManUnited', position: { lat: 53.4631, lng: -2.2914 } , icon: "{{ url_for('static', filename='images/emblem/ManUnited.png') }}", url:'/team/ManUnited'},
+                { name: 'WestHam', position: { lat: 51.5389, lng: -0.0172 } , icon: "{{ url_for('static', filename='images/emblem/WestHam.png') }}", url:'/team/WestHam'},
+                { name: 'Chelsea', position: { lat: 51.4817, lng: -0.1909 } , icon: "{{ url_for('static', filename='images/emblem/Chelsea.png') }}", url:'/team/Chelsea'},
+                { name: 'Crystal', position: { lat: 51.3981, lng: -0.086 } , icon: "{{ url_for('static', filename='images/emblem/Crystal.png') }}", url:'/team/Crystal'},
+                { name: 'Wolves', position: { lat: 52.5904, lng: -2.1305 } , icon: "{{ url_for('static', filename='images/emblem/Wolves.png') }}", url:'/team/Wolves'},
+                { name: 'Fulham', position: { lat: 51.4749, lng: -0.2216 } , icon: "{{ url_for('static', filename='images/emblem/Fulham.png') }}", url:'/team/Fulham'},
+                { name: 'Brentford', position: { lat: 51.4908, lng: -0.2887 } , icon: "{{ url_for('static', filename='images/emblem/Brentford.png') }}", url:'/team/Brentford'},
+                { name: 'NotForest', position: { lat: 52.94, lng: -1.1329 } , icon: "{{ url_for('static', filename='images/emblem/NotForest.png') }}", url:'/team/NotForest'},
+                { name: 'Everton', position: { lat: 53.4389, lng: -2.9662 } , icon: "{{ url_for('static', filename='images/emblem/Everton.png') }}", url:'/team/Everton'},
+                { name: 'Luton', position: { lat: 51.8843, lng: -0.4317 } , icon: "{{ url_for('static', filename='images/emblem/Luton.png') }}", url:'/team/Luton'},
+                { name: 'Burnley', position: { lat: 53.7891, lng: -2.2302 } , icon: "{{ url_for('static', filename='images/emblem/Burnley.png') }}", url:'/team/Burnley'},
+                { name: 'Bournemouth', position: { lat: 50.7358, lng: -1.8398 } , icon: "{{ url_for('static', filename='images/emblem/Bournemouth.png') }}", url:'/team/Bournemouth'},
+                { name: 'Sheffield', position: { lat: 53.3706, lng: -1.471 } , icon: "{{ url_for('static', filename='images/emblem/Sheffield.png') }}", url:'/team/Sheffield'},
+
+            ];
+
+            for (const team of teams) {
+                const marker = new google.maps.Marker({
+                    position: team.position,
+                    map: map,
+                    title: team.name,
+                    icon: {
+                        url:team.icon,
+                        scaledSize: new google.maps.Size(100, 100)
+                    },
+                });
+                google.maps.event.addListener(marker, 'click',function() {window.location.href = team.url;
+                });
+            }
+        }
+
+        // マップの初期化
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</body>
+</html>

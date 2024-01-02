@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bournemouth</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/Bournemouth.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>Bournemouth</h2>
+                <p>設立年: 1890年</p>
+                <p>ホーム: ボーンマス</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>ボーンマスのクラブ。愛称はクラブカラーの赤をさくらんぼに見立てたチェリーズ。<br>もともと３部や４部のチームだったが、2015年に初めてプレミアリーグに参戦。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>バイタリティ・スタジアム</p>
+                <p>収容人数: 11364人</p>
+            </div>
+            <div class="titles">
+                <h2>タイトル</h2>
+                <ul>
+                    <li>チャンピオンシップ: 1回</li>
+                    <li>フットボールリーグトロフィー: 1回</li>
+                    <!-- その他のタイトル -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

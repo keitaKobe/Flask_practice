@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luton Town</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/Luton.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>Luton Towm</h2>
+                <p>設立年: 1885年</p>
+                <p>ホーム: ルートン</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>ルートンのクラブ。愛称はThe Hatters（帽子職人）。<br>経営難もあり、勝ち点はく奪や地域リーグへの降格を経験するなど、波乱万丈の歴史を歩む。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>ケニルワース・ロード</p>
+                <p>収容人数: 10356人</p>
+            </div>
+            <div class="titles">
+                <h2>コラム</h2>
+                <p>ルートンタウンの本拠地である「ケニルワース・ロード」は住宅街の真っ只中に位置し、<br>入場口から民家の間を通ってスタンドに移動するなど趣のあるスタジアムになっている。</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

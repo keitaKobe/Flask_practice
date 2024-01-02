@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulham</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/Fulham.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>Fulham</h2>
+                <p>設立年: 1879年</p>
+                <p>ホーム: ロンドン</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>ロンドン西部のクラブ。愛称はコテッジャーズ。<br>同地域に本拠地を置くチェルシーとは距離にして数キロ、ロンドン地下鉄の駅で２駅しか離れていない。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>クレイヴン・コテージ</p>
+                <p>収容人数: 25700人</p>
+            </div>
+            <div class="titles">
+                <h2>コラム</h2>
+                <p>1890年代に建設された現在のチェルシーの本拠地スタンフォード・ブリッジは<br>元々はフラムの本拠地になる予定で竣工されたものであった。しかし金銭面で折り合いがつかず、使用は実現しなかった。</p>
+               
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

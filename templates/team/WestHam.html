@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Ham United</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/WestHam.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>West Ham United</h2>
+                <p>設立年: 1895年</p>
+                <p>ホーム: ロンドン</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>ロンドン東部のクラブ。愛称はハマーズ。代表歌の「I’m Forever Blowing Bubbles」が有名で、<br>スタジアムではこの歌とともにシャボン玉が出てくる。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>ロンドン・スタジアム</p>
+                <p>収容人数: 60000人</p>
+            </div>
+            <div class="titles">
+                <h2>タイトル</h2>
+                <ul>
+                    <li>FAカップ: 3回</li>
+                    <li>コミュニティシールド: 1回</li>
+                    <li>UECL: 1回</li>
+                
+                    <!-- その他のタイトル -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

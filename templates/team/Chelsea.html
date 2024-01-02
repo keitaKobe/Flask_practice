@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+ 
+
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/Chelsea.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>Chelsea</h2>
+                <p>設立年: 1905年</p>
+                <p>ホーム: ロンドン</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>ロンドン西部のクラブ。ブルーズの愛称で知られる強豪クラブ。Big6の１つ。<br>アブラモヴィッチ時代に豊富な資金力で、急速に力をつけた。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>スタンフォード・ブリッジ</p>
+                <p>収容人数: 40341人</p>
+            </div>
+            <div class="titles">
+                <h2>タイトル</h2>
+                <ul>
+                    <li>プレミアリーグ: 5回</li>
+                    <li>フットボールリーグ: 1回</li>
+                    <li>FAカップ: 8回</li>
+                    <li>UCL:2回</li>
+                    <li>UEL:2回</li>
+                    <!-- その他のタイトル -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

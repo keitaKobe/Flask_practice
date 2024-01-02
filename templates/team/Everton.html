@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everton</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <ul class="menu">
+            <li><a href="/map">地図</a></li>
+            <li><a href="/teams">チーム紹介</a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='images/graph/premier logo.jpeg') }}" alt="logo" width="50px" height="50px"></a></li>
+            <li><a href="/ranking">順位表</a></li>
+            <li><a href="/news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="left-side">
+            <div class="team-logo">
+                <img src="{{ url_for('static', filename='images/emblem/Everton.png') }}" alt="チームロゴ" />
+            </div>
+            <div class="team-info">
+                <h2>Everton</h2>
+                <p>設立年: 1878年</p>
+                <p>ホーム: リバプール</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="overview">
+                <h2>概要</h2>
+                <p>リバプールをホームタウンとするクラブ。愛称はトフィーズ。<br>リバプールFCと強いライバル関係にあり、両者の対戦はマージーサイド・ダービーと呼ばれる。</p>
+            </div>
+            <div class="stadium">
+                <h2>スタジアム</h2>
+                <p>グディソン・パーク</p>
+                <p>収容人数: 39571人</p>
+            </div>
+            <div class="titles">
+                <h2>タイトル</h2>
+                <ul>
+                    <li>フットボールリーグ: 9回</li>
+                    <li>FAカップ: 5回</li>
+                    <li>コミュニティシールド: 9回</li>
+                    <!-- その他のタイトル -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
